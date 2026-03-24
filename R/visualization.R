@@ -13,3 +13,4 @@ ggplot(bp, aes(x = Treatment, y = BP, fill = Sex)) +
   geom_violin(trim = FALSE) + 
   geom_dotplot(binaxis = 'y', stackdir = 'center', 
                position = position_dodge(1))
+
