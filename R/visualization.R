@@ -13,4 +13,14 @@ ggplot(bp, aes(x = Treatment, y = BP, fill = Sex)) +
   geom_violin(trim = FALSE) + 
   geom_dotplot(binaxis = 'y', stackdir = 'center', 
                position = position_dodge(1))
+#### ANCOVA with Age as Covariate ####
 
+
+#### Two-Way ANOVA with sex as covariate ####
+# Boxplots to visualize the difference
+boxplot(BP ~ Sex:Medication,
+        data = bp,
+        main = "Blood Pressure Distribution by Group",
+        xlab = "Group",
+        ylab = "Blood Pressure",
+        col = "firebrick")
