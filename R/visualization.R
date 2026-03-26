@@ -4,16 +4,11 @@ png(file = "ANCOVA_age.png",
     width = 800, height = 800)
 
 bp %>%
-  ggplot(aes(x = Age, 
-             y = BP, 
-             color = Treatment))+
+  ggplot(aes(x = Age, y = BP, color = Treatment))+
   geom_point()+
-  geom_line(aes(y = predicted_ni_age, 
-                linetype = "solid"))+
-  geom_line(aes(y = predicted_fm_age, 
-                linetype = "dotted"))+
-  labs(x = "Age", 
-       y = "Blood Pressure")+
+  geom_line(aes(y = predicted_ni_age, linetype = "solid"))+
+  geom_line(aes(y = predicted_fm_age, linetype = "dotted"))+
+  labs(x = "Age", y = "Blood Pressure")+
   ggtitle("Efficacy of Treatment Across Age Groups")+
   theme(plot.title = element_text(hjust = 0.5, size = 22, face = "bold"), axis.text=element_text(size=18),
         axis.title=element_text(size=18,face="bold"), legend.title = element_text(size = 14, face = "bold"))+
@@ -23,8 +18,6 @@ bp %>%
                           labels = c("No Interaction", "Interaction"))
 
 dev.off()
-
-
 
 #### Two-Way ANOVA with sex as covariate ####
 # Visualizing the differences in BP for each medication for both men and women
@@ -66,13 +59,3 @@ bp %>%
   scale_color_discrete(name = "Sex", labels = c("Female","Male"))
 
 dev.off()
-
-
-
-# Boxplots to visualize the difference
-boxplot(BP ~ Sex:Medication,
-        data = bp,
-        main = "Blood Pressure Distribution by Group",
-        xlab = "Group",
-        ylab = "Blood Pressure",
-        col = "firebrick")

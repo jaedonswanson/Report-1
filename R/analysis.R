@@ -51,13 +51,13 @@ bp_ni_III_age <- lm(BP ~ Treatment + Age, data = bp,
                     contrasts = list(Treatment = contr.sum))
 Anova(bp_ni_III_age, type = "III")
 
+# test for differences assuming interaction term
+bp_fm_III_age <- lm(BP ~ Treatment + Age + Treatment*Age, data = bp, 
+                    contrasts = list(Treatment = contr.sum))
+Anova(bp_fm_III_age, type = "III")
 
 
-
-
-
-
-#### Two-Way ANOVA with sex as covariate ####
+#### Two-Way ANOVA with sex as confounding variable ####
 # mean and sd for bp
 bp %>%
   group_by(Sex, Treatment) %>%
@@ -86,15 +86,10 @@ leveneTest(BP ~ Sex * Treatment, data = bp)
 TukeyHSD(sex_model, conf.level = .95)
 
 plot(TukeyHSD(sex_model, conf.level=.95), las = 2)
+#### Overall Impact of Treatment(s)####
+treatment_effect <- aov(BP ~ Treatment, data = bp)
 
+Anova(treatment_effect)
 
-
-
-
-
-
-
-
-
-
+TukeyHSD(treatment_effect, conf.level = 0.95 )
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  26 MAR 2026 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  26 MAR 2026 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -161,6 +161,14 @@ Package: setspace 2022/12/04 v6.7b set line spacing
 (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count295
+\float@exts=\toks18
+\float@box=\box53
+\@float@everytoks=\toks19
+\@floatcapt=\box54
+)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -183,7 +191,7 @@ File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count295
+\l__color_backend_stack_int=\count296
 )
 (./Report_1.aux
 
@@ -195,25 +203,25 @@ LaTeX Warning: Label `fig:label' multiply defined.
 )
 \openout1 = `Report_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-Package hyperref Info: Link coloring OFF on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+Package hyperref Info: Link coloring OFF on input line 15.
  (./Report_1.out) (./Report_1.out)
 \@outlinefile=\write3
 \openout3 = `Report_1.out'.
@@ -221,17 +229,17 @@ Package hyperref Info: Link coloring OFF on input line 14.
 
 (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
+\scratchcounter=\count297
 \scratchdimen=\dimen155
-\scratchbox=\box53
-\nofMPsegments=\count297
-\nofMParguments=\count298
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count299
+\scratchbox=\box55
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count300
 \MPscratchDim=\dimen156
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
-\everyMPtoPDFconversion=\toks19
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks21
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -241,46 +249,65 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 36.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 36.
+
+[1
+
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 </Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/Repor
-t-1/R/sex_violin_plot.png, id=28, 803.0pt x 803.0pt>
+t-1/R/sex_violin_plot.png, id=59, 803.0pt x 803.0pt>
 File: /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/
 Report-1/R/sex_violin_plot.png Graphic file (type png)
 <use /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/R
 eport-1/R/sex_violin_plot.png>
 Package pdftex.def Info: /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_
-2026/Stats/Reports/Report-1/R/sex_violin_plot.png  used on input line 36.
-(pdftex.def)             Requested size: 345.0pt x 345.00146pt.
+2026/Stats/Reports/Report-1/R/sex_violin_plot.png  used on input line 56.
+(pdftex.def)             Requested size: 172.5pt x 172.4946pt.
+
+[2]
 </Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/Repor
-t-1/R/sex_effect_plot.png, id=30, 803.0pt x 803.0pt>
+t-1/R/sex_effect_plot.png, id=68, 803.0pt x 803.0pt>
 File: /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/
 Report-1/R/sex_effect_plot.png Graphic file (type png)
 <use /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/R
 eport-1/R/sex_effect_plot.png>
 Package pdftex.def Info: /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_
-2026/Stats/Reports/Report-1/R/sex_effect_plot.png  used on input line 43.
-(pdftex.def)             Requested size: 345.0pt x 345.00146pt.
+2026/Stats/Reports/Report-1/R/sex_effect_plot.png  used on input line 63.
+(pdftex.def)             Requested size: 172.5pt x 172.4946pt.
 </Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/Repor
-t-1/R/ANCOVA_age.png, id=31, 803.0pt x 803.0pt>
+t-1/R/ANCOVA_age.png, id=69, 803.0pt x 803.0pt>
 File: /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/
 Report-1/R/ANCOVA_age.png Graphic file (type png)
 <use /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/R
 eport-1/R/ANCOVA_age.png>
 Package pdftex.def Info: /Users/jaedonswanson/Desktop/School/MS/Classes/Spring_
-2026/Stats/Reports/Report-1/R/ANCOVA_age.png  used on input line 50.
-(pdftex.def)             Requested size: 345.0pt x 345.00146pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 64.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 64.
-
-[1
-
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2 </Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/Re
-port-1/R/sex_violin_plot.png>] [3 </Users/jaedonswanson/Desktop/School/MS/Class
-es/Spring_2026/Stats/Reports/Report-1/R/sex_effect_plot.png>] [4 </Users/jaedon
-swanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/Report-1/R/ANCOVA_a
-ge.png>] (./Report_1.aux)
+2026/Stats/Reports/Report-1/R/ANCOVA_age.png  used on input line 70.
+(pdftex.def)             Requested size: 172.5pt x 172.4946pt.
+ [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.74 
+     
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.74 
+      </Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports
+/Report-1/R/sex_violin_plot.png> </Users/jaedonswanson/Desktop/School/MS/Classe
+s/Spring_2026/Stats/Reports/Report-1/R/sex_effect_plot.png>] [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.81 \end {document}
+                     </Users/jaedonswanson/Desktop/School/MS/Classes/Spring_202
+6/Stats/Reports/Report-1/R/ANCOVA_age.png>] (./Report_1.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -289,24 +316,33 @@ L3 programming layer <2026-01-19>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Report_1.out' has not changed.
-(rerunfilecheck)             Checksum: CCF32F9F55ED1C318EAE54F74B96D0D7;587.
+
+Package rerunfilecheck Warning: File `Report_1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Report_1.out':
+(rerunfilecheck)             Before: 339FD03895DB314645F3BCF4EEE93A02;2151
+(rerunfilecheck)             After:  540FCA057CF34E6DA5CF8701CDEFC7E0;2135.
  ) 
 Here is how much of TeX's memory you used:
- 8477 strings out of 467525
- 133725 string characters out of 5418982
- 540223 words of memory out of 5000000
- 37313 multiletter control sequences out of 15000+600000
- 628494 words of font info for 43 fonts, out of 8000000 for 9000
+ 8563 strings out of 467525
+ 135044 string characters out of 5418982
+ 542887 words of memory out of 5000000
+ 37389 multiletter control sequences out of 15000+600000
+ 629099 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,408b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,542b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Report_1.pdf (4 pages, 241291 bytes).
+></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
+usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
+ocal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Report_1.pdf (4 pages, 271922 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 64 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 119 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 
