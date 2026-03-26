@@ -1,7 +1,14 @@
 \documentclass {article}
+
 \usepackage {hyperref}
+
 \usepackage {setspace}
+
 \usepackage {indent first}
+
+\usepackage {graphicx}
+\graphicspath{{/Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/Report-1/R}}
+
 
 \doublespacing
 \begin {document}
@@ -24,7 +31,31 @@ Optional for this report
 
 \section {Figure(s)}
 
+\begin {figure}
+	\centering
+	\includegraphics [width=\linewidth] {sex_violin_plot.png}
+	\caption{Distribution of blood pressure measurements for each treatment group. Each treatment group had 30 participants of each sex.}
+	\label{fig:label}
+\end{figure}
+
+\begin {figure}
+	\centering
+	\includegraphics [width=\linewidth] {sex_effect_plot.png}
+	\caption{Mean blood pressure for each treatment group with 95\% confidence intervals.}
+	\label{fig:label}
+\end{figure}
+
+\begin {figure}
+	\centering
+	\includegraphics [width=\linewidth] {ANCOVA_age.png}
+	\caption{Distribution of blood pressure measurements across ages for each treatment group. The dotted line is the linear model with an interaction between age and treatment effect. The solid line is the linear model with no interaction between age and treatment effect.}
+	\label{fig:label}
+\end{figure}
+
+
+
 Needs to look like how I would submit (Caption, labels, stuff like that).
+
 
 \section {Appendix}
 
