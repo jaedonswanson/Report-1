@@ -75,7 +75,7 @@ bp %>%
 # looks like Medication A was the most succesful at lowering blood pressure, and females had lower results
 
 # Fitting a two-way ANOVA model
-sex_model <- aov(BP ~ Sex * Treatment,
+i_dont_know_whatever <- aov(BP ~ Sex * Treatment,
                  data = bp)
 summary(sex_model)
         
