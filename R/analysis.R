@@ -38,7 +38,7 @@ bp$predicted_ni_age <- predict(bp_ni_model_age)
 
 ## full model (includes an interaction term)
 ### fm = 'full model'
-bp_fm_age <- lm(BP ~ Treatment + Age + Treatment*Age, data = bp)
+bp_fm_age <- lm(BP ~ Treatment * Age, data = bp)
 #### adding the predictions to the data frame
 bp$predicted_fm_age <- predict(bp_fm_age)
 
