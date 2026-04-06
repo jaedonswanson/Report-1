@@ -1,81 +1,105 @@
 \documentclass {article}
-
+%% The following packages are to successfully add code blocks
+\usepackage{listings}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+%% Finished with code block section
+\setcounter{secnumdepth}{0}
+\pagenumbering {gobble}
+\usepackage[margin=1in]{geometry}
 \usepackage {hyperref}
-
-\usepackage {setspace}
-
-\usepackage {indent first}
-
 \usepackage{float} 
 \usepackage {graphicx}
 \graphicspath{{/Users/jaedonswanson/Desktop/School/MS/Classes/Spring_2026/Stats/Reports/Report-1/R}}
-
-
+\usepackage {setspace}
 \doublespacing
 \begin {document}
 \section {Statistical Methods}
-\subsection {Software}
+The first analysis completed was to assess if the treatment an individual received had an impact on blood pressure (BP). This was done by completing an analysis of variance (ANOVA) with BP as the response variable and treatment as the explanatory. After the ANOVA a Tukey-Kramer test was used to compare the groups for differences between specific treatments.
 
-All figure creation and data analysis was completed in R 4.5.2. Packages used at well as specific code can be found in the attached appendix.
+After the ANOVA was completed, potential confounding variables were analyzed for impact on treatment effect. This was done by completing an analysis of covariance (ANCOVA) with sex and age as potential covariates. After the ANCOVA, interactions were assessed to investigate if a persons sex or age had an impact on treatment effect.
 
-\subsection {Impact of Treatment on Blood Pressure}
-
-The first analysis completed was to assess if treatment group had an impact on blood pressure (BP). This was completed by an analysis of variance (ANOVA) comparing BP reading to received treatment. After the ANOVA a Tukey-Kramer test was used to compare groups for differences.
-
-\subsection{Impact of Age on Treatment Effectiveness}
-
-The next analysis completed was in order to assess if a persons age had an impact on the effectiveness of the treatment they received. To do this linear models were first created for both an interaction as well as no interaction. These models were then compared using an analysis of covariance (ANCOVA) to examine if the interaction model predicted treatment effect significantly better than the non-interaction model.
-
-\subsection {Impact of Sex on Treatment Effectiveness}
-
-The last analysis completed was to examine if sex had an impact on treatment effectiveness. This was done using a two-way ANOVA to compare treatment effect between sex's. After the ANOVA was completed, a Tukey-Kramer test was again used to look at differences between specific groups.
+All of the data analysis and figure creation was completed in R 4.5.2. The code used for data analysis can be found in the attached appendix.
 
 \section {Results}
-\subsection {Impact of Treatment on Blood Pressure}
+The treatment an individual received had a significant effect on their BP ($P < 0.001$, $F_{2, 177} = 35.07$). Persons receiving Medication A had significantly lower BP than those in the placebo group ($P < 0.001$). Individuals in the group receiving medication A also had a significantly lower BP than those receiving medication B ($P < 0.001$) (Fig. 1).
 
-The only treatment that was effective at significantly lowering blood pressure was Medication A. It was significantly better than both the placebo group ($P_{adj} < 0.001$, ) and medication B ($P_{adj} < 0.001$).
-
-\subsection{Impact of Age on Treatment Effectiveness}
-
-A persons age did not  have a significant effect on the effectiveness of a treatment ($P = 0.928$, $F_{2, 30} = 0.074$).
-
-
-\subsection {Impact of Sex on Blood Pressure}
-
-A persons sex did not have a significant impact on the effectiveness of a treatment ($P = 0.116$, $F_{2, 30} = 1.815$). However, for all groups females had significantly lower BP than the males. In the placebo group the females had a significantly lower BP than males ($P_{adj} = 0.003$). Females receiving medication A also had significantly lower BP than the males ($P < .001$). Finally, women on Medication B again had a significantly lower BP than the males receiving the same treatment ($P = 0.003$).
+There was no significant impact of a persons sex on treatment effect ($P = 0.0293$, $F_{2, 168} = 1.238$) (Fig. 2). Similarly, age had no significant effect on treatment effect ($P = 0.467$, $F_{2, 168} = 0.764$) (Fig 3). 
 
 
 \section {Conclusions}
-
-Since medication A was correlated with significantly lower BP than both medication B and the placebo group, it should be the recommended treatment for males or females of any age seeking to lower BP.
- 
+Medication A caused significantly lower BP than both medication B and the placebo group. This result was not affected by the recipients age or sex. For this reason, if a person is looking to lower their BP, medication A should be prescribed in favor of Medication B.
+\pagebreak
 \section{Figures}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{sex_violin_plot.png}
-    \caption{Distribution of blood pressure measurements for each treatment group. Each treatment group had 30 participants of each sex.}
+    \includegraphics[width=0.75\textwidth]{treatment_violin.png}
+    \caption{Distribution of blood pressure measurements for each treatment group with 95\% confidence intervals.}
     \label{fig:violin}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{sex_effect_plot.png}
+    \includegraphics[width=0.75\textwidth]{sex_effect_plot.png}
     \caption{Mean blood pressure for each treatment group with 95\% confidence intervals.}
     \label{fig:effect}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{ANCOVA_age.png}
+    \includegraphics[width=0.75\textwidth]{ANCOVA_age.png}
     \caption{Distribution of blood pressure measurements across ages for each treatment group.}
     \label{fig:ancova}
 \end{figure}
-
+\pagebreak
 \section {Appendix}
-
-All data used for in this report as well as the R code used for analysis and create figures can be found at:
+The following is the code used in the analysis of the data in this report.
 \\
-\url {https://github.com/jaedonswanson/Report-1/tree/main/R}
+\begin{lstlisting}
+#### Loading Packages and Setting Up Data Frame ####
+# Loading packages
+library(tidyverse)
+library(car)
+library(emmeans)
+# Creating the data frame that will be used for our analysis
+bp <- read_csv("data.csv")
+## changing the treatment and sex columns so R sees it as a categorical variable
+bp$Treatment <- as.factor(bp$Treatment)
+bp$Sex <- as.factor(bp$Sex)
 
+#### ANOVA for Treatment Effect ####
+# Fitting a two-way ANOVA model
+sex_model <- aov(BP ~ Treatment, data = bp)
+summary(sex_model)
+## Assumption Check
+plot(residuals(sex_model))
+abline(0,0)
+# Analyzing Treatment Differences
+TukeyHSD(sex_model, conf.level = .95)
+plot(TukeyHSD(sex_model, conf.level=.95), las = 2)
+
+
+#### ANCOVA for Interaction(s) ####
+# Fitting models to the data
+bp_fm <- lm(BP ~ Treatment * Age * Sex, data = bp, 
+            contrasts = list(Treatment = contr.sum, Sex = contr.sum))
+## Assumption Checks
+plot(residuals(bp_fm))
+abline(0,0)
+# adding the predictions to the data frame
+bp$predicted <- predict(bp_fm)
+# Testing for significance of interaction.
+Anova(bp_fm, type = 3)
+\end{lstlisting}
 \end {document}
